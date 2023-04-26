@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIDA INGRESO</title>
+    <!-- Link de  sitoi sweetaler mesajes mas elegantes -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <h1>VALIDACION DE INGRESO USUARIO/ CONTRESEÑA</h1>
+        <h2>CICLO FOR</h2>
+        <script>
+            //
+            let datof;//contgreseña ingresada x teclado
+            let sw=0;// variable tipo switche para controil de ingreso
+            let clave=123;
+            //CICLO FOR
+            for (f=1;f<=3;f++){
+                datof=parseInt(prompt("ingrese contraseña de acceso"));
+                //condicional
+                if (datof==clave){
+                    swal("estimado usuario","Acceso Permitido","success");
+                    document.write("ACCESO PERMITODO");
+                    sw=1;//var switcher casmbias de valor
+                    break
+                }
+            }
+            //si ha fallado ingreso la vasriable sw=0
+            if (sw==0){
+                swal("estimado usuario","CUENTA BLOQUEADA","ERROR");
+                document.write("<br>");
+                document.write("CUENTA BLOQUEADA");
+            }
+        </script>
+    </center>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validacion de materias</title>
+    <!-- link de sitio Sweetalert mensajes más elegantes-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./img/incap.png" alt="" width="150" height="150">
+        <h1>BOLETIN DE NOTAS PROGRAMACION</h1>
+        <h2>MATERIA PAE06 JAVASCRIPT</h2>
+        <Script>
+            let nota,suma, prom;//variable para notas de std
+            suma=0;//sumador de notas
+            prom=0;//colocar nota definitiva std
+            num=1;//contador de notas
+            //Entrada
+            nomb_std=prompt("Ingrese nombre de estudiante");
+            //proceso ciclo while
+            while (num<=3){
+                while (num<=3){
+                nota_STD=parseFloat(prompt("ingrese nota std: [1=desmpeño]"));
+                //acumulador o sumador de notas std
+                suma+=nota_STD;
+                //contador de notas ingresadas
+                num++;
+            
+                nota_STD=parseFloat(prompt("ingrese nota std: [2=talleres]"));
+                //acumulador o sumador de notas std
+                suma+=nota_STD;
+                //contador de notas ingresadas
+                num++;
+                nota_STD=parseFloat(prompt("ingrese nota std: [3=examenes]"));
+                //acumulador o sumador de notas std
+                suma+=nota_STD;
+                //contador de notas ingresadas
+                num++;
+            }
+                //acumulador o sumador de notas std
+                suma+=nota_STD;
+                //contador de notas ingresadas
+                num++;
+                nota_STD=parseFloat(prompt("ingrese nota std: [2=talleres]"));
+                //acumulador o sumador de notas std
+                suma+=nota_STD;
+                //contador de notas ingresadas
+                num++;
+                nota_STD=parseFloat(prompt("ingrese nota std: [3=examenes]"));
+                //acumulador o sumador de notas std
+                suma+=nota_STD;
+                //contador de notas ingresadas
+                num++;
+            }
+            //calcular promedio final std
+            prom=suma/3;
+            //validacion de  calificacion
+            if (prom>=3.0){
+                swal("Apreciado estudiante","APROBASTE MATERIA","success");
+            }else{
+                swal("Apreciado estudiante","REPROBASTE MATERIA","error");
+            }
+            document.write("<br>");
+            document.write("NOTA FINAL DE PROGRAMACION WEB PAE..."+prom.toFixed(2)+"<br>");
+        </Script>
+    </center>
+</body>
+</html>
