@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METODO INDEXOF</title>
+</head>
+<body>
+    <center>
+        <h1>METODO INDEOF / BUSQUEDA ARRAYS</h1>
+        <h2>METODO TRIM / ELIMINAR ESPACIOS EN DATOS</h2>
+            <br><br>
+            <p>ESTUDIANTE 
+                SE ENCUENTRA EN EL INDICE N°.</p>
+                <p id="std"></p>
+            <script>
+                let num;
+                let std=new Array();
+                //captura
+                num=parseInt(prompt("ingrese cantidad de elemntos a guardar a arrays"));
+                for (i=0;i<num;i++){
+                    std[i]=prompt("ingrese nombre std");
+                }
+                //BUSQUEDA
+                let datob=prompt("ingrese nombre STD a buscar");
+                let find=std.indexOf(datob.trim());
+                //el metodo indexof da como resultado 0 si no da -1(falso)
+                if (find>-1){
+                    document.getElementById("std").innerHTML=find+"..."+datob;
+                }else{
+                    document.getElementById("std").innerHTML="error.. NOMBRE DEL ESTUDIANTE NO ENCONTRADO..."+ datob;
+                }
+            </script>
+        
+    </center>
+</body>
+</html>

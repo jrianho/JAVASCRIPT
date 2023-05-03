@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPLICE</title>
+</head>
+<body>
+    <center>
+        <h1>METODO SPLICE / ELIMINAR DATOS EN ARRAYS</h1>
+        <h2>METODO INDEXOF Y TRIM</h2>
+        <br><br>
+        <p>EL NUEVO ARRAYS ES ...</p>
+        <script>
+            let num;
+            let datos=new Array();
+            num=parseInt(prompt("Ingrese cantidad de elementos a ingresar a arrays"));
+            for (i=0;i<num;i++){
+            //recorre arrays
+            datos[i]=prompt("Ingrese dato nuevo al arrays.."+i);
+            }
+            //BUSQUEDA
+            let dator=prompt("ingrese dato a eliminar en arrays");
+            let indice=datos.indexOf(dator.trim());
+            //
+            if (indice>-1){
+                var index=datos.splice(indice,1);
+                alert("DATO ELIMINADO DE ARRAYS.... LISTA NUEVA..."+datos);
+            }else{
+                alert("ERROR... NO SE ENCONTRO DATO EN ARRAYS");
+            }
+            document.write(datos+",");
+            console.log(datos);
+        </script>
+    </center>
+</body>
+</html>
